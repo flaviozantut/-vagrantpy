@@ -12,5 +12,6 @@ class common {
   include sudo
   include users
   include pip
+  include zsh
 
 }
