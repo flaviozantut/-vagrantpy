@@ -1,6 +1,8 @@
 class pip {
   package { [
-    'pyramid', 'django', 'Flask'
+    'pyramid', 'django', 'Flask', 'SQLAlchemy',
+    'virtualenvwrapper', 'MySQL-python',
+
   ]:
     ensure => latest,
     provider => pip,

@@ -18,10 +18,11 @@ Vagrant::Config.run do |config|
   config.vm.forward_port 80, 8080
   # Flask development
   config.vm.forward_port 5000, 5000
-  # Expressjs development
-  config.vm.forward_port 3000, 3000
-  # Sinatra development
-  config.vm.forward_port 4567, 4567
+  # Pyramid development
+  config.vm.forward_port 6543, 6543
+
+  
+  
 
   # Forward agent when doing `vagrant ssh`
   config.ssh.forward_agent = true
@@ -33,7 +34,7 @@ Vagrant::Config.run do |config|
   config.vm.network :hostonly, "172.16.1.3"
 
   # Mount share through NFS
-  config.vm.share_folder("v-root", "/vagrant", ".", :nfs => true)
+  # config.vm.share_folder("v-root", "/vagrant", ".", :nfs => true)
 
   # Puppet bootstrap - update apt cache
   config.vm.provision :puppet do |puppet|
